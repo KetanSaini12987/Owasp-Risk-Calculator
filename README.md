@@ -37,7 +37,10 @@ Risk = Likelihood × Impact
 3. Run the app:
    python app.py
 
-4. Open in browser:
-   http://127.0.0.1:5000/
    <img width="1431" height="370" alt="Screenshot_2025-08-31_14_34_37" src="https://github.com/user-attachments/assets/6f2d2471-fa86-41d8-8878-086e16b4ed2e" />
+
+5. Open in browser:
+   http://127.0.0.1:5000/
+   
    <img width="1920" height="886" alt="Screenshot_2025-08-31_14_35_07" src="https://github.com/user-attachments/assets/bebab1d3-01d9-470e-a867-cc131147ea12" />
+
