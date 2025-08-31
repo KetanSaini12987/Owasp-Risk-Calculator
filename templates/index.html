@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OWASP Risk Calculator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>OWASP Risk Calculator</h1>
+    <form method="post">
+
+      <h2>Likelihood Factors</h2>
+      <label>Skill Level:</label><input type="number" name="skill" min="0" max="9" required><br>
+      <label>Motive:</label><input type="number" name="motive" min="0" max="9" required><br>
+      <label>Opportunity:</label><input type="number" name="opportunity" min="0" max="9" required><br>
+      <label>Size of Group:</label><input type="number" name="size" min="0" max="9" required><br>
+      <label>Ease of Discovery:</label><input type="number" name="discovery" min="0" max="9" required><br>
+      <label>Ease of Exploit:</label><input type="number" name="exploit" min="0" max="9" required><br>
+      <label>Awareness:</label><input type="number" name="awareness" min="0" max="9" required><br>
+      <label>Intrusion Detection:</label><input type="number" name="intrusion" min="0" max="9" required><br>
+
+      <h2>Impact Factors</h2>
+      <label>Confidentiality:</label><input type="number" name="conf" min="0" max="9" required><br>
+      <label>Integrity:</label><input type="number" name="integ" min="0" max="9" required><br>
+      <label>Availability:</label><input type="number" name="avail" min="0" max="9" required><br>
+      <label>Accountability:</label><input type="number" name="account" min="0" max="9" required><br>
+      <label>Financial:</label><input type="number" name="finance" min="0" max="9" required><br>
+      <label>Reputation:</label><input type="number" name="reputation" min="0" max="9" required><br>
+      <label>Compliance:</label><input type="number" name="compliance" min="0" max="9" required><br>
+      <label>Privacy:</label><input type="number" name="privacy" min="0" max="9" required><br>
+
+      <button type="submit">Calculate Risk</button>
+    </form>
+
+    {% if risk %}
+      <div class="result {{ risk|lower }}">
+        <h2>Risk Level: {{ risk }}</h2>
+        <p>Likelihood Score: {{ likelihood }}</p>
+        <p>Impact Score: {{ impact }}</p>
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>
