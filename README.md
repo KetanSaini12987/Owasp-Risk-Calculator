@@ -30,11 +30,12 @@ Risk = Likelihood × Impact
    cd owasp-risk-calculator
 
 2. Create virtual environment & install dependencies:
-   python -m venv venv
-   source venv/bin/activate   # On Windows: venv\Scripts\activate
-   pip install -r requirements.txt
+   a. python -m venv venv
+   b. source venv/bin/activate
+   # On Windows: venv\Scripts\activate
+   c. pip install -r requirements.txt.txt
 
-3. Run the app:
+4. Run the app:
    python app.py
 
    <img width="1431" height="370" alt="Screenshot_2025-08-31_14_34_37" src="https://github.com/user-attachments/assets/6f2d2471-fa86-41d8-8878-086e16b4ed2e" />
